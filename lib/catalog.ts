@@ -19,7 +19,7 @@ export const songs: Song[] = [
     project: "Algebra of Light",
     status: "Original",
     summary:
-      "Progressive rock and metal built around guitar-forward writing, rhythmic turns, and melodic contrast.",
+      "A progressive rock anchor track built around guitar-forward writing, rhythmic turns, and melodic contrast.",
     tags: ["Progressive rock", "Metal", "Instrumental", "Guitar"],
     audioUrl: "https://soundcloud.com/scott-sanford/algebra-of-light",
     credits: ["Scott Sanford: guitars, composition, programming", "Additional studio contributors to be confirmed"],
@@ -32,7 +32,7 @@ export const songs: Song[] = [
     project: "Algebra of Light",
     status: "Original",
     summary:
-      "A darker progressive track from the existing public catalog. Replace this summary with the final song note.",
+      "A darker progressive piece from the existing public catalog, ready for fuller credits and release notes.",
     tags: ["Progressive rock", "Guitar", "Atmospheric"],
     audioUrl: "https://soundcloud.com/scott-sanford/prayer-for-the-dying",
     credits: ["Scott Sanford: guitars and composition"],
@@ -52,6 +52,18 @@ export const songs: Song[] = [
     credits: ["Scott Sanford: guitar arrangement"],
     notes:
       "Confirm final rights language and whether this should remain public as a featured cover."
+  },
+  {
+    slug: "contemporary-pop-christian-writing",
+    title: "Contemporary Pop and Christian Writing",
+    project: "New Songwriting",
+    status: "Demo",
+    summary:
+      "A developing lane for modern pop compositions with Christian elements, vocals, hooks, and lyric-focused arrangements.",
+    tags: ["Contemporary pop", "Christian elements", "Songwriting", "In progress"],
+    credits: ["Scott Sanford: writing and production direction"],
+    notes:
+      "Use this as a placeholder for the newer songwriting direction until individual song titles, demos, lyrics, and release plans are ready."
   }
 ];
 

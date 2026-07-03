@@ -7,10 +7,11 @@ export default function AboutPage() {
     <section className="page-section about-layout">
       <div className="page-heading">
         <p className="eyebrow">About</p>
-        <h1>Guitar-first music shaped by rock, fusion, metal, and odd rhythmic instincts.</h1>
+        <h1>Guitar-first writing with room for rock, pop, faith, and studio experiments.</h1>
         <p>
-          Scott Sanford is a Dallas-area guitarist and writer whose music pulls from hard rock,
-          progressive metal, jazz fusion, blues, and instrumental guitar traditions.
+          Scott Sanford is a Dallas-area guitarist and writer whose catalog is expanding from
+          progressive instrumentals into contemporary pop compositions and Christian-influenced
+          songwriting.
         </p>
       </div>
 
@@ -19,8 +20,8 @@ export default function AboutPage() {
         <p>
           Scott first locked onto guitar through the power and sound of classic hard rock. Over
           time, that foundation widened into progressive rock, fusion, chicken pickin, blues, and
-          more technical instrumental players. The result is guitar music that favors melody,
-          tension, rhythmic movement, and enough sharp edges to keep the listener awake.
+          more technical instrumental players. Newer writing adds pop structure, lyric-centered
+          themes, and faith-informed ideas without losing the guitar identity.
         </p>
       </div>
 
