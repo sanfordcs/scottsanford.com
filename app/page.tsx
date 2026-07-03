@@ -13,11 +13,11 @@ export default function Home() {
         </div>
         <div className="hero-copy">
           <p className="eyebrow">Official music site</p>
-          <h1>Electric guitar roots. Pop instincts. Faith-tinged songs in progress.</h1>
+          <h1>Guitar-led songs moving between stage lights, studio ideas, and faith-shaped hooks.</h1>
           <p className="hero-text">
-            Scott Sanford writes and records across guitar-forward rock, progressive instrumentals,
-            contemporary pop, and Christian-influenced compositions. The catalog is growing into a
-            wider home for songs, studio notes, videos, and projects.
+            Scott Sanford writes and records across progressive guitar work, instrumental
+            arrangements, and a newer lane of contemporary pop with Christian elements. Start with
+            the public tracks, then follow the catalog as the songwriting side comes forward.
           </p>
           <div className="button-row">
             <Link className="button primary" href="/music">
@@ -77,10 +77,11 @@ export default function Home() {
       <section className="section-grid">
         <div>
           <p className="eyebrow">Catalog directions</p>
-          <h2>Not one lane. A working catalog with several centers of gravity.</h2>
+          <h2>A catalog with more than one center of gravity.</h2>
           <p>
-            The site now treats Algebra of Light as one project inside a broader artist catalog,
-            leaving room for pop songs, Christian themes, guitar instrumentals, and covers.
+            Algebra of Light carries the progressive guitar side. Back to You shows the arrangement
+            and performance side. The next chapter adds pop structure, vocal writing, and Christian
+            themes without abandoning the guitar DNA.
           </p>
         </div>
         <div className="card-grid">

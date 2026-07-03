@@ -14,9 +14,9 @@ export default function MusicPage() {
         <p className="eyebrow">Music catalog</p>
         <h1>Songs, recordings, and active writing lanes</h1>
         <p>
-          A starter catalog for public listening across progressive guitar work, instrumental
-          covers, and newer contemporary pop compositions with Christian elements. Each entry can
-          grow into its own page with audio, credits, lyrics, notes, and video.
+          Public tracks, performance links, and the writing lanes that define where the catalog is
+          going next. Some entries are listenable now; others mark active songwriting directions
+          that will become full song pages as demos, lyrics, credits, and release plans are ready.
         </p>
       </div>
 

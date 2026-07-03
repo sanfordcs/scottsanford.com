@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Scott Sanford Music",
   description:
-    "Official music site for Scott Sanford, featuring guitar-driven rock, progressive instrumentals, contemporary pop compositions, Christian-influenced songs, videos, and song notes.",
+    "Official music site for Scott Sanford, featuring progressive guitar tracks, instrumental arrangements, live performance clips, and contemporary pop writing with Christian elements.",
   metadataBase: new URL("https://scottsanford.com")
 };
 
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main>{children}</main>
         <footer className="site-footer">
           <p>Scott Sanford Music</p>
-          <p>Original songs, guitar-forward projects, pop compositions, and videos.</p>
+          <p>Progressive guitar, instrumental arrangements, pop writing, and performance clips.</p>
         </footer>
       </body>
     </html>

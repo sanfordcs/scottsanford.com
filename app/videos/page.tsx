@@ -13,8 +13,8 @@ export default function VideosPage() {
         <p className="eyebrow">Videos</p>
         <h1>Performances and clips</h1>
         <p>
-          A focused video index for public fans. Add YouTube, Vimeo, live clips, gear demos, and
-          performance videos here as the source links are confirmed.
+          Public video links from performance clips and legacy site material. More live clips,
+          studio videos, and song-specific media can be added here as they are cleaned up.
         </p>
       </div>
 

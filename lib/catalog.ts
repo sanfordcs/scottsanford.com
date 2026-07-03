@@ -7,6 +7,7 @@ export type Song = {
   summary: string;
   tags: string[];
   audioUrl?: string;
+  audioEmbedUrl?: string;
   videoUrl?: string;
   credits: string[];
   notes: string;
@@ -19,12 +20,17 @@ export const songs: Song[] = [
     project: "Algebra of Light",
     status: "Original",
     summary:
-      "A progressive rock anchor track built around guitar-forward writing, rhythmic turns, and melodic contrast.",
-    tags: ["Progressive rock", "Metal", "Instrumental", "Guitar"],
+      "A public Algebra of Light track built around progressive guitar writing, shifting rhythmic ideas, and a melodic-to-heavy arc.",
+    tags: ["Progressive rock", "Metal", "Instrumental", "Guitar", "Public track"],
     audioUrl: "https://soundcloud.com/scott-sanford/algebra-of-light",
-    credits: ["Scott Sanford: guitars, composition, programming", "Additional studio contributors to be confirmed"],
+    audioEmbedUrl:
+      "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/scott-sanford/algebra-of-light&color=%2316d9ff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false",
+    credits: [
+      "Scott Sanford: guitars, writing, arrangement, original home-studio production",
+      "Programmed drums remain on this track from the original project notes"
+    ],
     notes:
-      "Use this page as the anchor for the larger Algebra of Light project story, credits, and track list."
+      "Algebra of Light is the progressive side of the catalog: guitar-led writing, heavier sections, melodic passages, and the freedom to move between precision and atmosphere."
   },
   {
     slug: "prayer-for-the-dying",
@@ -32,12 +38,17 @@ export const songs: Song[] = [
     project: "Algebra of Light",
     status: "Original",
     summary:
-      "A darker progressive piece from the existing public catalog, ready for fuller credits and release notes.",
-    tags: ["Progressive rock", "Guitar", "Atmospheric"],
+      "A darker public track from the Algebra of Light catalog, centered on tension, atmosphere, and guitar-forward progressive writing.",
+    tags: ["Progressive rock", "Guitar", "Atmospheric", "Public track"],
     audioUrl: "https://soundcloud.com/scott-sanford/prayer-for-the-dying",
-    credits: ["Scott Sanford: guitars and composition"],
+    audioEmbedUrl:
+      "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/scott-sanford/prayer-for-the-dying&color=%2316d9ff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false",
+    credits: [
+      "Scott Sanford: guitars, writing, arrangement",
+      "Part of the Algebra of Light public SoundCloud set"
+    ],
     notes:
-      "Starter entry created from the current public site. Add release details, credits, and final audio links."
+      "This track represents the heavier and more atmospheric edge of the existing public catalog. It should eventually get final credits, release context, and any notes on personnel."
   },
   {
     slug: "back-to-you-instrumental",
@@ -45,13 +56,18 @@ export const songs: Song[] = [
     project: "Instrumental Covers",
     status: "Cover",
     summary:
-      "Instrumental guitar arrangement currently represented on the legacy site through SoundCloud and Vimeo references.",
-    tags: ["Instrumental", "Cover", "Guitar"],
+      "Instrumental guitar arrangement of Back to You, represented on the legacy site through SoundCloud and a Bent Tree Prelude Vimeo clip.",
+    tags: ["Instrumental", "Cover", "Guitar", "Video"],
     audioUrl: "https://soundcloud.com/scott-sanford/back-to-you-cover-instrumental",
+    audioEmbedUrl:
+      "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/scott-sanford/back-to-you-cover-instrumental&color=%2316d9ff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false",
     videoUrl: "https://vimeo.com/22886011",
-    credits: ["Scott Sanford: guitar arrangement"],
+    credits: [
+      "Scott Sanford: guitar arrangement and performance",
+      "Legacy video reference: Bent Tree Prelude Back To You"
+    ],
     notes:
-      "Confirm final rights language and whether this should remain public as a featured cover."
+      "This is a useful public-facing bridge between performance, arrangement, and the guitar side of the catalog. Keep it clearly labeled as a cover."
   },
   {
     slug: "contemporary-pop-christian-writing",
@@ -59,11 +75,11 @@ export const songs: Song[] = [
     project: "New Songwriting",
     status: "Demo",
     summary:
-      "A developing lane for modern pop compositions with Christian elements, vocals, hooks, and lyric-focused arrangements.",
-    tags: ["Contemporary pop", "Christian elements", "Songwriting", "In progress"],
-    credits: ["Scott Sanford: writing and production direction"],
+      "A developing lane for modern pop songs with Christian elements, vocals, hooks, lyric-centered arrangements, and production-forward demos.",
+    tags: ["Contemporary pop", "Christian elements", "Songwriting", "In progress", "Demos"],
+    credits: ["Scott Sanford: writing, arrangement, and production direction"],
     notes:
-      "Use this as a placeholder for the newer songwriting direction until individual song titles, demos, lyrics, and release plans are ready."
+      "This is not a single release yet. It marks the direction the site needs to support next: songs that are less about progressive guitar architecture and more about melody, message, vocals, and modern production."
   }
 ];
 

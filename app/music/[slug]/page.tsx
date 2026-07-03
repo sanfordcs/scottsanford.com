@@ -53,17 +53,30 @@ export default async function SongPage({ params }: SongPageProps) {
       <div className="detail-grid">
         <article className="detail-card">
           <h2>Listen</h2>
-          {song.audioUrl ? (
-            <a className="button primary" href={song.audioUrl} target="_blank" rel="noreferrer">
-              Open audio
-            </a>
+          {song.audioEmbedUrl ? (
+            <iframe
+              className="audio-widget"
+              title={`${song.title} SoundCloud player`}
+              allow="autoplay"
+              src={song.audioEmbedUrl}
+            />
           ) : (
-            <p>Audio link will be added here.</p>
+            <p>Audio will be added when a public demo or release link is ready.</p>
           )}
-          {song.videoUrl ? (
-            <a className="button secondary" href={song.videoUrl} target="_blank" rel="noreferrer">
-              Open video
-            </a>
+          <div className="button-row compact">
+            {song.audioUrl ? (
+              <a className="button primary" href={song.audioUrl} target="_blank" rel="noreferrer">
+                Open SoundCloud
+              </a>
+            ) : null}
+            {song.videoUrl ? (
+              <a className="button secondary" href={song.videoUrl} target="_blank" rel="noreferrer">
+                Open video
+              </a>
+            ) : null}
+          </div>
+          {!song.audioUrl && !song.videoUrl ? (
+            <p className="small-note">No public player is attached to this writing lane yet.</p>
           ) : null}
         </article>
 
