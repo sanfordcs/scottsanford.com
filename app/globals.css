@@ -320,16 +320,21 @@ h3 {
   animation: rise-in 850ms ease 120ms both;
   display: grid;
   gap: 1rem;
+  isolation: isolate;
   position: relative;
 }
 
 .photo-shell {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 5 / 6;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 28px;
   box-shadow: 0 30px 80px var(--shadow), 0 0 70px rgba(255, 63, 164, 0.24);
   overflow: hidden;
   position: relative;
+}
+
+.photo-shell.hero-photo {
+  max-height: 690px;
 }
 
 .photo-shell::after {
@@ -346,6 +351,40 @@ h3 {
   width: 100%;
 }
 
+.hero-photo img {
+  object-position: 48% 42%;
+}
+
+.photo-stack {
+  bottom: 6.2rem;
+  display: grid;
+  gap: 0.75rem;
+  position: absolute;
+  right: -0.8rem;
+  width: min(40%, 190px);
+  z-index: 2;
+}
+
+.photo-stack img {
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.photo-stack img:first-child {
+  aspect-ratio: 16 / 10;
+  object-position: 38% 46%;
+}
+
+.photo-stack img:last-child {
+  object-position: 44% 50%;
+  transform: rotate(4deg);
+}
+
 .feature-panel,
 .contact-card,
 .detail-card,
@@ -357,10 +396,11 @@ h3 {
 }
 
 .feature-panel {
-  margin-top: -6.8rem;
+  margin-top: -5.2rem;
   padding: 1.5rem;
   position: relative;
-  width: min(92%, 520px);
+  width: min(82%, 500px);
+  z-index: 3;
 }
 
 .feature-panel h2 {
@@ -398,6 +438,60 @@ h3 {
 
 .section-grid > div:first-child p:not(.eyebrow) {
   margin-top: 1.2rem;
+}
+
+.photo-band {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.35fr 0.75fr 0.9fr;
+  padding: 0 2rem 5rem;
+}
+
+.photo-tile {
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-tile::after {
+  background: linear-gradient(180deg, transparent 48%, rgba(7, 8, 18, 0.62));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.photo-tile img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.photo-tile.wide {
+  aspect-ratio: 16 / 9;
+}
+
+.photo-tile.wide img {
+  object-position: 50% 48%;
+}
+
+.photo-tile.portrait {
+  aspect-ratio: 4 / 5;
+  transform: translateY(2.2rem);
+}
+
+.photo-tile.portrait img {
+  object-position: 50% 32%;
+}
+
+.photo-tile.stage {
+  aspect-ratio: 4 / 5;
+}
+
+.photo-tile.stage img {
+  object-position: 50% 74%;
 }
 
 .card-grid {
@@ -667,6 +761,14 @@ h3 {
   .artist-panel {
     max-width: 620px;
   }
+
+  .photo-band {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-tile.portrait {
+    transform: none;
+  }
 }
 
 @media (max-width: 900px) {
@@ -735,7 +837,13 @@ h3 {
 
   .feature-panel {
     margin-top: -4rem;
-    width: 94%;
+    width: 90%;
+  }
+
+  .photo-stack {
+    bottom: 5.8rem;
+    right: 0.6rem;
+    width: min(34%, 150px);
   }
 
   .detail-hero,

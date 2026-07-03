@@ -34,14 +34,28 @@ export default function Home() {
             <span>Instrumental guitar</span>
           </div>
         </div>
-        <aside className="artist-panel" aria-label="Scott Sanford in the studio">
-          <div className="photo-shell">
+        <aside className="artist-panel" aria-label="Scott Sanford performance photos">
+          <div className="photo-shell hero-photo">
+            <Image
+              src="/images/bent-tree-red-stage.jpg"
+              alt="Scott Sanford playing guitar under red and white stage lights"
+              width={1600}
+              height={2133}
+              priority
+            />
+          </div>
+          <div className="photo-stack" aria-hidden="true">
+            <Image
+              src="/images/bent-tree-purple-stage.jpg"
+              alt=""
+              width={1136}
+              height={640}
+            />
             <Image
               src="/images/scott-studio.jpg"
-              alt="Scott Sanford holding a guitar in a recording studio"
+              alt=""
               width={720}
               height={960}
-              priority
             />
           </div>
           <div className="feature-panel">
@@ -77,6 +91,33 @@ export default function Home() {
               <p>{song.summary}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="photo-band" aria-label="Performance and studio photos">
+        <div className="photo-tile wide">
+          <Image
+            src="/images/bent-tree-purple-stage.jpg"
+            alt="Scott Sanford playing guitar on a purple-lit stage"
+            width={1136}
+            height={640}
+          />
+        </div>
+        <div className="photo-tile portrait">
+          <Image
+            src="/images/bent-tree-blue-closeup.jpg"
+            alt="Close-up of Scott Sanford with guitar under blue stage lights"
+            width={1080}
+            height={1920}
+          />
+        </div>
+        <div className="photo-tile stage">
+          <Image
+            src="/images/bent-tree-wide-stage.jpg"
+            alt="Scott Sanford playing guitar on a wide stage with blue lighting"
+            width={800}
+            height={1200}
+          />
         </div>
       </section>
     </>
