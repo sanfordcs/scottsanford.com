@@ -818,13 +818,35 @@ h3 {
   margin-bottom: 1rem;
 }
 
-.audio-widget {
+.audio-widget,
+.video-widget {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--line);
   border-radius: 16px;
-  height: 166px;
   margin-bottom: 1rem;
   width: 100%;
+}
+
+.audio-widget {
+  height: 166px;
+}
+
+.video-widget {
+  aspect-ratio: 16 / 9;
+  display: block;
+  height: auto;
+}
+
+.video-actions {
+  display: grid;
+  gap: 1rem;
+  justify-items: end;
+  min-width: min(420px, 100%);
+}
+
+.video-preview {
+  margin-bottom: 0;
+  max-width: 420px;
 }
 
 .small-note {
@@ -1012,6 +1034,15 @@ h3 {
 
   .detail-meta {
     justify-items: start;
+  }
+
+  .video-actions {
+    justify-items: start;
+    min-width: 0;
+  }
+
+  .video-preview {
+    max-width: 100%;
   }
 }
 

@@ -11,10 +11,11 @@ export default function VideosPage() {
     <section className="page-section">
       <div className="page-heading">
         <p className="eyebrow">Videos</p>
-        <h1>Performances and clips</h1>
+        <h1>Performances, covers, and archive clips</h1>
         <p>
-          Public video links from performance clips and legacy site material. More live clips,
-          studio videos, and song-specific media can be added here as they are cleaned up.
+          Public video links from performance clips, instrumental covers, and legacy band material.
+          More live clips, studio videos, and song-specific media can be added here as they are
+          cleaned up.
         </p>
       </div>
 
@@ -26,9 +27,20 @@ export default function VideosPage() {
               <h2>{song.title}</h2>
               <p>{song.summary}</p>
             </div>
-            <a className="button secondary" href={song.videoUrl} target="_blank" rel="noreferrer">
-              Open video
-            </a>
+            <div className="video-actions">
+              {song.videoEmbedUrl ? (
+                <iframe
+                  className="video-widget video-preview"
+                  title={`${song.title} video player`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  src={song.videoEmbedUrl}
+                />
+              ) : null}
+              <a className="button secondary" href={song.videoUrl} target="_blank" rel="noreferrer">
+                Open video
+              </a>
+            </div>
           </article>
         ))}
       </div>

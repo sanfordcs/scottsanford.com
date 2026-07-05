@@ -53,7 +53,7 @@ export default async function SongPage({ params }: SongPageProps) {
 
       <div className="detail-grid">
         <article className="detail-card">
-          <h2>Listen</h2>
+          <h2>Listen / Watch</h2>
           {song.audioEmbedUrl ? (
             <iframe
               className="audio-widget"
@@ -61,9 +61,19 @@ export default async function SongPage({ params }: SongPageProps) {
               allow="autoplay"
               src={song.audioEmbedUrl}
             />
-          ) : (
-            <p>Audio will be added when a public demo or release link is ready.</p>
-          )}
+          ) : null}
+          {song.videoEmbedUrl ? (
+            <iframe
+              className="video-widget"
+              title={`${song.title} video player`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              src={song.videoEmbedUrl}
+            />
+          ) : null}
+          {!song.audioEmbedUrl && !song.videoEmbedUrl ? (
+            <p>Audio or video will be added when a public demo or release link is ready.</p>
+          ) : null}
           <div className="button-row compact">
             {song.audioUrl ? (
               <a className="button primary" href={song.audioUrl} target="_blank" rel="noreferrer">

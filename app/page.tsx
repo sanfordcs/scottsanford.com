@@ -17,7 +17,8 @@ export default function Home() {
           <p className="hero-text">
             Algebra of Light is the progressive artist identity for Kiser Gates. C. Scott Sanford
             is the separate artist name for contemporary pop songs, starting with Kimberly (My
-            Secret Waterfall). This site ties the catalog together without blurring the brands.
+            Secret Waterfall). The archive also keeps older covers and band clips findable without
+            blurring the current artist brands.
           </p>
           <div className="button-row">
             <Link className="button primary" href="/music">
@@ -128,11 +129,12 @@ export default function Home() {
           <p>
             Algebra of Light should feel like a standalone band/artist with Kiser Gates as its
             first album. C. Scott Sanford should feel like a different shelf for the pop,
-            faith-shaped, lyric-forward songs.
+            faith-shaped, lyric-forward songs. Older covers and band videos can live here as
+            archive material under Scott Sanford.
           </p>
         </div>
         <div className="card-grid">
-          {songs.slice(0, 4).map((song) => (
+          {songs.map((song) => (
             <Link className="song-card" key={song.slug} href={`/music/${song.slug}`}>
               <span>{song.status}</span>
               <h3>{song.title}</h3>
