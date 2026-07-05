@@ -31,6 +31,15 @@ export default function AboutPage() {
       </div>
 
       <div className="story-block muted-block">
+        <h2>Artist names</h2>
+        <p>
+          Algebra of Light is the artist and band name for the progressive rock and metal material,
+          with Kiser Gates as the first album identity. C. Scott Sanford is the separate artist name
+          for contemporary pop songs, beginning with Kimberly (My Secret Waterfall).
+        </p>
+      </div>
+
+      <div className="story-block muted-block">
         <h2>For guitar listeners</h2>
         <p>
           Influences mentioned on the legacy site include Alex Lifeson, Al Di Meola, Eddie Van

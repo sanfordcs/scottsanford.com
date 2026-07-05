@@ -40,12 +40,13 @@ export default async function SongPage({ params }: SongPageProps) {
 
       <div className="detail-hero">
         <div>
-          <p className="eyebrow">{song.project}</p>
+          <p className="eyebrow">{song.artist}</p>
           <h1>{song.title}</h1>
           <p>{song.summary}</p>
         </div>
         <div className="detail-meta">
           <span>{song.status}</span>
+          {song.release ? <span>{song.release}</span> : null}
           {song.year ? <span>{song.year}</span> : <span>Year TBD</span>}
         </div>
       </div>

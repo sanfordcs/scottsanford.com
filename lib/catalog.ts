@@ -1,7 +1,8 @@
 export type Song = {
   slug: string;
   title: string;
-  project: string;
+  artist: "Algebra of Light" | "C. Scott Sanford" | "Scott Sanford";
+  release?: string;
   status: "Original" | "Cover" | "Demo" | "Live";
   year?: string;
   summary: string;
@@ -17,17 +18,18 @@ export const songs: Song[] = [
   {
     slug: "algebra-of-light",
     title: "Algebra of Light",
-    project: "Algebra of Light",
+    artist: "Algebra of Light",
+    release: "Kiser Gates",
     status: "Original",
     summary:
-      "A public Algebra of Light track built around progressive guitar writing, shifting rhythmic ideas, and a melodic-to-heavy arc.",
-    tags: ["Progressive rock", "Metal", "Instrumental", "Guitar", "Public track"],
+      "A public Algebra of Light track built around progressive guitar writing, shifting rhythmic ideas, and a melodic-to-heavy arc for the Kiser Gates album identity.",
+    tags: ["Algebra of Light", "Kiser Gates", "Progressive rock", "Metal", "Instrumental"],
     audioUrl: "https://soundcloud.com/scott-sanford/algebra-of-light",
     audioEmbedUrl:
       "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/scott-sanford/algebra-of-light&color=%2316d9ff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false",
     credits: [
       "Scott Sanford: guitars, writing, arrangement, original home-studio production",
-      "Programmed drums remain on this track from the original project notes"
+      "Programmed drums remain on this track from the original recording notes"
     ],
     notes:
       "Algebra of Light is the progressive side of the catalog: guitar-led writing, heavier sections, melodic passages, and the freedom to move between precision and atmosphere."
@@ -35,11 +37,12 @@ export const songs: Song[] = [
   {
     slug: "prayer-for-the-dying",
     title: "Prayer for the Dying",
-    project: "Algebra of Light",
+    artist: "Algebra of Light",
+    release: "Kiser Gates",
     status: "Original",
     summary:
-      "A darker public track from the Algebra of Light catalog, centered on tension, atmosphere, and guitar-forward progressive writing.",
-    tags: ["Progressive rock", "Guitar", "Atmospheric", "Public track"],
+      "A darker Algebra of Light track centered on tension, atmosphere, and guitar-forward progressive writing for the Kiser Gates album world.",
+    tags: ["Algebra of Light", "Kiser Gates", "Progressive rock", "Atmospheric"],
     audioUrl: "https://soundcloud.com/scott-sanford/prayer-for-the-dying",
     audioEmbedUrl:
       "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/scott-sanford/prayer-for-the-dying&color=%2316d9ff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false",
@@ -53,7 +56,7 @@ export const songs: Song[] = [
   {
     slug: "back-to-you-instrumental",
     title: "Back to You",
-    project: "Instrumental Covers",
+    artist: "Scott Sanford",
     status: "Cover",
     summary:
       "Instrumental guitar arrangement of Back to You, represented on the legacy site through SoundCloud and a Bent Tree Prelude Vimeo clip.",
@@ -70,16 +73,16 @@ export const songs: Song[] = [
       "This is a useful public-facing bridge between performance, arrangement, and the guitar side of the catalog. Keep it clearly labeled as a cover."
   },
   {
-    slug: "contemporary-pop-christian-writing",
-    title: "Contemporary Pop and Christian Writing",
-    project: "New Songwriting",
+    slug: "kimberly-my-secret-waterfall",
+    title: "Kimberly (My Secret Waterfall)",
+    artist: "C. Scott Sanford",
     status: "Demo",
     summary:
-      "A developing lane for modern pop songs with Christian elements, vocals, hooks, lyric-centered arrangements, and production-forward demos.",
-    tags: ["Contemporary pop", "Christian elements", "Songwriting", "In progress", "Demos"],
-    credits: ["Scott Sanford: writing, arrangement, and production direction"],
+      "The first C. Scott Sanford composition: a contemporary pop-oriented song with a more personal, melodic lane than the Algebra of Light material.",
+    tags: ["C. Scott Sanford", "Contemporary pop", "Christian elements", "Songwriting", "In progress"],
+    credits: ["C. Scott Sanford: writing, arrangement, and production direction"],
     notes:
-      "This is not a single release yet. It marks the direction the site needs to support next: songs that are less about progressive guitar architecture and more about melody, message, vocals, and modern production."
+      "This song does not have final public artwork attached yet. The site should treat it as the first clear marker of the C. Scott Sanford identity: melody-forward, more contemporary, and separate from the Algebra of Light artist brand."
   }
 ];
 
@@ -89,6 +92,6 @@ export function getSong(slug: string) {
   return songs.find((song) => song.slug === slug);
 }
 
-export function getProjects() {
-  return Array.from(new Set(songs.map((song) => song.project))).sort();
+export function getArtists() {
+  return Array.from(new Set(songs.map((song) => song.artist))).sort();
 }

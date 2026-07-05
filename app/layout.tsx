@@ -5,13 +5,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Scott Sanford Music",
   description:
-    "Official music site for Scott Sanford, featuring progressive guitar tracks, instrumental arrangements, live performance clips, and contemporary pop writing with Christian elements.",
+    "Official home for Scott Sanford's music, including Algebra of Light, Kiser Gates, C. Scott Sanford songs, guitar work, and performance clips.",
   metadataBase: new URL("https://scottsanford.com")
 };
 
 const navItems = [
   { href: "/music", label: "Music" },
   { href: "/algebra-of-light", label: "Algebra of Light" },
+  { href: "/c-scott-sanford", label: "C. Scott Sanford" },
   { href: "/videos", label: "Videos" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" }
@@ -20,13 +21,13 @@ const navItems = [
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning>
         <header className="site-header">
           <Link className="brand" href="/" aria-label="Scott Sanford home">
             <span className="brand-mark">SS</span>
             <span>
               <strong>Scott Sanford</strong>
-              <small>Guitar, songs, studio work</small>
+              <small>Algebra of Light / C. Scott Sanford</small>
             </span>
           </Link>
           <nav className="site-nav" aria-label="Primary navigation">
@@ -40,7 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main>{children}</main>
         <footer className="site-footer">
           <p>Scott Sanford Music</p>
-          <p>Progressive guitar, instrumental arrangements, pop writing, and performance clips.</p>
+          <p>Algebra of Light, Kiser Gates, C. Scott Sanford songs, and performance clips.</p>
         </footer>
       </body>
     </html>

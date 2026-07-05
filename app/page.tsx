@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { featuredSong, songs } from "@/lib/catalog";
+import { songs } from "@/lib/catalog";
 
 export default function Home() {
   return (
@@ -12,12 +12,12 @@ export default function Home() {
           <span className="pulse-ring" />
         </div>
         <div className="hero-copy">
-          <p className="eyebrow">Official music site</p>
-          <h1>Guitar-led songs moving between stage lights, studio ideas, and faith-shaped hooks.</h1>
+          <p className="eyebrow">Official music hub</p>
+          <h1>Two artist names. One guitar-driven songwriter behind them.</h1>
           <p className="hero-text">
-            Scott Sanford writes and records across progressive guitar work, instrumental
-            arrangements, and a newer lane of contemporary pop with Christian elements. Start with
-            the public tracks, then follow the catalog as the songwriting side comes forward.
+            Algebra of Light is the progressive artist identity for Kiser Gates. C. Scott Sanford
+            is the separate artist name for contemporary pop songs, starting with Kimberly (My
+            Secret Waterfall). This site ties the catalog together without blurring the brands.
           </p>
           <div className="button-row">
             <Link className="button primary" href="/music">
@@ -26,12 +26,15 @@ export default function Home() {
             <Link className="button secondary" href="/algebra-of-light">
               Algebra of Light
             </Link>
+            <Link className="button secondary" href="/c-scott-sanford">
+              C. Scott Sanford
+            </Link>
           </div>
           <div className="signal-row" aria-label="Current music directions">
-            <span>Progressive rock</span>
-            <span>Contemporary pop</span>
-            <span>Christian elements</span>
-            <span>Instrumental guitar</span>
+            <span>Algebra of Light</span>
+            <span>Kiser Gates</span>
+            <span>C. Scott Sanford</span>
+            <span>Kimberly</span>
           </div>
         </div>
         <aside className="artist-panel" aria-label="Scott Sanford performance photos">
@@ -59,33 +62,77 @@ export default function Home() {
             />
           </div>
           <div className="feature-panel">
-            <p className="eyebrow">Featured track</p>
-            <h2>{featuredSong.title}</h2>
-            <p>{featuredSong.summary}</p>
+            <p className="eyebrow">Artist split</p>
+            <h2>Algebra of Light for the album world. C. Scott Sanford for the songs.</h2>
+            <p>
+              The site now separates the progressive artist brand from the contemporary pop artist
+              name, while still making the connection clear for listeners.
+            </p>
             <div className="tag-row">
-              {featuredSong.tags.map((tag) => (
-                <span key={tag}>{tag}</span>
-              ))}
+              <span>Progressive artist</span>
+              <span>Pop artist</span>
+              <span>One catalog hub</span>
             </div>
-            <Link className="text-link" href={`/music/${featuredSong.slug}`}>
-              View song notes
+            <Link className="text-link" href="/music">
+              View catalog
             </Link>
           </div>
         </aside>
       </section>
 
+      <section className="identity-section" aria-label="Artist identities">
+        <article className="identity-card algebra-card">
+          <div className="identity-media">
+            <Image
+              src="/images/algebra-light-logo-square.webp"
+              alt="Algebra of Light artist logo"
+              width={900}
+              height={900}
+            />
+          </div>
+          <div>
+            <p className="eyebrow">Artist / Band</p>
+            <h2>Algebra of Light</h2>
+            <p>
+              The progressive rock and metal artist identity. This is the name that should stand
+              on its own on Spotify, with Kiser Gates positioned as the first album world.
+            </p>
+            <Link className="text-link" href="/algebra-of-light">
+              Enter Algebra of Light
+            </Link>
+          </div>
+        </article>
+
+        <article className="identity-card cscott-card">
+          <div className="waterfall-mark" aria-hidden="true">
+            <span />
+          </div>
+          <div>
+            <p className="eyebrow">Artist</p>
+            <h2>C. Scott Sanford</h2>
+            <p>
+              The artist name for the more contemporary pop direction. The first song in this lane
+              is Kimberly (My Secret Waterfall), with artwork still to be created.
+            </p>
+            <Link className="text-link" href="/c-scott-sanford">
+              View C. Scott Sanford
+            </Link>
+          </div>
+        </article>
+      </section>
+
       <section className="section-grid">
         <div>
-          <p className="eyebrow">Catalog directions</p>
-          <h2>A catalog with more than one center of gravity.</h2>
+          <p className="eyebrow">Catalog direction</p>
+          <h2>Build the public site around the artist names listeners will see.</h2>
           <p>
-            Algebra of Light carries the progressive guitar side. Back to You shows the arrangement
-            and performance side. The next chapter adds pop structure, vocal writing, and Christian
-            themes without abandoning the guitar DNA.
+            Algebra of Light should feel like a standalone band/artist with Kiser Gates as its
+            first album. C. Scott Sanford should feel like a different shelf for the pop,
+            faith-shaped, lyric-forward songs.
           </p>
         </div>
         <div className="card-grid">
-          {songs.slice(0, 3).map((song) => (
+          {songs.slice(0, 4).map((song) => (
             <Link className="song-card" key={song.slug} href={`/music/${song.slug}`}>
               <span>{song.status}</span>
               <h3>{song.title}</h3>

@@ -2,14 +2,15 @@
 
 Public fan-focused music site for Scott Sanford.
 
-## Current scaffold
+## Current site
 
 This repo is a Next.js site prepared for Vercel. It includes:
 
-- Home page with a featured track
+- Home page with split artist positioning
 - Music catalog page
 - Individual song pages generated from catalog data
-- Algebra of Light project page
+- Algebra of Light artist page
+- C. Scott Sanford artist page
 - Videos page
 - About page
 - Contact page placeholder
@@ -39,7 +40,7 @@ Starter song data lives in:
 lib/catalog.ts
 ```
 
-Add or edit entries there first. Each entry can include title, project, status, tags, audio links, video links, credits, and notes.
+Add or edit entries there first. Each entry can include title, artist, release, status, tags, audio links, video links, credits, and notes.
 
 ## Vercel deployment
 
@@ -52,8 +53,8 @@ Add or edit entries there first. Each entry can include title, project, status, 
 
 ## Next content tasks
 
-- Replace placeholder catalog notes with final song data.
+- Replace remaining draft catalog notes with final song data.
 - Confirm the public contact email address.
-- Add real artist/project images.
+- Add final artwork for Kimberly (My Secret Waterfall).
 - Confirm final SoundCloud, Vimeo, YouTube, Spotify, Apple Music, and Bandcamp links.
 - Decide whether covers should remain public and how they should be labeled.
