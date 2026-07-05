@@ -37,25 +37,25 @@ export default function Home() {
         <aside className="artist-panel" aria-label="Scott Sanford performance photos">
           <div className="photo-shell hero-photo">
             <Image
-              src="/images/bent-tree-red-stage.jpg"
-              alt="Scott Sanford playing guitar under red and white stage lights"
-              width={1600}
-              height={2133}
+              src="/images/studio-guitar-clean.webp"
+              alt="Scott Sanford holding a guitar in a recording studio"
+              width={900}
+              height={1200}
               priority
             />
           </div>
           <div className="photo-stack" aria-hidden="true">
             <Image
+              src="/images/bent-tree-red-stage.jpg"
+              alt=""
+              width={1600}
+              height={2133}
+            />
+            <Image
               src="/images/bent-tree-purple-stage.jpg"
               alt=""
               width={1136}
               height={640}
-            />
-            <Image
-              src="/images/scott-studio.jpg"
-              alt=""
-              width={720}
-              height={960}
             />
           </div>
           <div className="feature-panel">

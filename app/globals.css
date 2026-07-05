@@ -330,16 +330,16 @@ h3 {
 }
 
 .photo-shell {
-  aspect-ratio: 5 / 6;
+  aspect-ratio: 3 / 4;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 28px;
-  box-shadow: 0 30px 80px var(--shadow), 0 0 70px rgba(255, 63, 164, 0.24);
+  box-shadow: 0 30px 80px var(--shadow), 0 0 70px rgba(22, 217, 255, 0.22);
   overflow: hidden;
   position: relative;
 }
 
 .photo-shell.hero-photo {
-  max-height: 690px;
+  max-height: 700px;
 }
 
 .photo-shell::after {
@@ -357,16 +357,16 @@ h3 {
 }
 
 .hero-photo img {
-  object-position: 48% 42%;
+  object-position: 44% 50%;
 }
 
 .photo-stack {
-  bottom: 6.2rem;
+  bottom: 6.4rem;
   display: grid;
   gap: 0.75rem;
   position: absolute;
   right: -0.8rem;
-  width: min(40%, 190px);
+  width: min(38%, 182px);
   z-index: 2;
 }
 
@@ -381,12 +381,13 @@ h3 {
 }
 
 .photo-stack img:first-child {
-  aspect-ratio: 16 / 10;
-  object-position: 38% 46%;
+  aspect-ratio: 4 / 5;
+  object-position: 34% 62%;
 }
 
 .photo-stack img:last-child {
-  object-position: 44% 50%;
+  aspect-ratio: 16 / 10;
+  object-position: 42% 48%;
   transform: rotate(4deg);
 }
 
